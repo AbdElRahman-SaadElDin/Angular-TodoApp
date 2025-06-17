@@ -1,0 +1,21 @@
+<section>
+  <h1>Todo List</h1>
+  <ul class="list">
+    @for(todo of item;track todo.id){
+    <li [ngClass]="{'completed': todo.status === 'completed'}">
+      <h3>{{todo.title}}</h3>
+      <div class="item__btns">
+        <button (click)="onComplete(todo.id)">
+          <span aria-hidden="true">✅</span> Completed
+        </button>
+        <button (click)="onDelete(todo.id)">
+          <span aria-hidden="true">🗑️</span> Delete
+        </button>
+        <button (click)="onEdit(todo.id)">
+          <span aria-hidden="true">✏️</span> Edit
+        </button>
+      </div>
+    </li>
+    }
+  </ul>
+</section>

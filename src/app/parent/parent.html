@@ -1,0 +1,9 @@
+<main>
+  <app-form (clickEvent)="receiveMessage($event)" />
+  <app-list
+    [item]="todos"
+    (deleteEvent)="deleteItem($event)"
+    (completeEvent)="completeItem($event)"
+    (editEvent)="editItem($event)"
+  />
+</main>
